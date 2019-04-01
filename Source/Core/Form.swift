@@ -332,6 +332,7 @@ extension Form {
         for rowTag in rowTags {
             guard var arr = rowObservers[rowTag]?[type], let index = arr.firstIndex(where: { $0 === taggable }) else { continue }
             arr.remove(at: index)
+            rowObservers[rowTag]?[type] = arr
         }
     }
 
