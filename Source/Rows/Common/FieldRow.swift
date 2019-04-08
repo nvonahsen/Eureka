@@ -243,9 +243,9 @@ open class _FieldCell<T> : Cell<T>, UITextFieldDelegate, TextFieldCell where T: 
                 textField.placeholder = (row as? FieldRowConformance)?.placeholder
             }
         }
-        if row.isHighlighted {
-            titleLabel?.textColor = tintColor
-        }
+//        if row.isHighlighted {
+//            titleLabel?.textColor = tintColor
+//        }
     }
 
     open override func cellCanBecomeFirstResponder() -> Bool {

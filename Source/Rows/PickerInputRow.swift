@@ -69,9 +69,10 @@ open class _PickerInputCell<T> : Cell<T>, CellType, UIPickerViewDataSource, UIPi
             detailTextLabel?.text = nil
         }
 
-        textLabel?.textColor = row.isDisabled ? .gray : .black
         if row.isHighlighted {
-            textLabel?.textColor = tintColor
+            detailTextLabel?.textColor = tintColor
+        } else {
+            detailTextLabel?.textColor = row.isDisabled ? .lightGray : .black
         }
 
         picker.reloadAllComponents()

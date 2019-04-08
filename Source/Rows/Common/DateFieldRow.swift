@@ -67,7 +67,9 @@ open class DateCell: Cell<Date>, CellType {
             datePicker.minuteInterval = minuteIntervalValue
         }
         if row.isHighlighted {
-            textLabel?.textColor = tintColor
+            detailTextLabel?.textColor = tintColor
+        } else {
+            detailTextLabel?.textColor = row.isDisabled ? .lightGray : .black
         }
     }
 

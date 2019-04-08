@@ -153,6 +153,7 @@ open class _SelectorViewController<Row: SelectableRowType, OptionsRow: OptionsPr
     open override func viewDidLoad() {
         super.viewDidLoad()
         setupForm()
+        self.tableView.backgroundColor = .white
     }
 
     open func setupForm() {
