@@ -37,7 +37,7 @@ open class PushSelectorCell<T: Equatable> : Cell<T>, CellType {
 
     open override func update() {
         super.update()
-        accessoryType = .disclosureIndicator
+        accessoryType = row.isDisabled ? .none : .disclosureIndicator
         editingAccessoryType = accessoryType
         selectionStyle = row.isDisabled ? .none : .default
     }
